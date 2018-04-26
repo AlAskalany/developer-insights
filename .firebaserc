@@ -1,0 +1,41 @@
+{
+  "projects": {
+    "default": "developer-insights",
+    "master": "developer-insights",
+    "prod": "developer-insights"
+  },
+  "ci": {
+    "createConfig": {
+      "master": {
+        "env": "production",
+        "firebase": {
+          "apiKey": "AIzaSyA1iXYGXS3cA0R_CRb2QB7gl1S104KJKHY",
+          "authDomain": "developer-insights.firebaseapp.com",
+          "databaseURL": "https://developer-insights.firebaseio.com",
+          "projectId": "developer-insights",
+          "storageBucket": "developer-insights.appspot.com"
+        },
+        "reduxFirebase": {
+          "userProfile": "users",
+          "enableLogging": false,
+          "updateProfileOnLogin": false
+        }
+      },
+      "prod": {
+        "env": "production",
+        "firebase": {
+          "apiKey": "AIzaSyA1iXYGXS3cA0R_CRb2QB7gl1S104KJKHY",
+          "authDomain": "developer-insights.firebaseapp.com",
+          "databaseURL": "https://developer-insights.firebaseio.com",
+          "projectId": "developer-insights",
+          "storageBucket": "developer-insights.appspot.com"
+        },
+        "reduxFirebase": {
+          "userProfile": "users",
+          "enableLogging": false,
+          "updateProfileOnLogin": false
+        }
+      }
+    }
+  }
+}
