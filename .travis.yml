@@ -40,4 +40,6 @@ addons:
     repo_token: $CODE_CLIMATE
 
 after_success:
-  - firebase-ci deploy -s # deploy without CI actions since createConfig is called earlier 
+  - npm i -g firebase-ci@latest  # install firebase-ci tool
+  - firebase-ci deploy -s # deploy without CI actions since createConfig is called earlier
+  
