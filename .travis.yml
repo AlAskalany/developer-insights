@@ -27,17 +27,22 @@ cache:
 install:
   # TODO: Use npm again functions runtime is updated to a node verion with lock files
   - yarn install
+  - npm install -g codecov
   - npm i -g firebase-ci # install firebase-ci for use in creating config and deploying
 
 script:
   - firebase-ci createConfig # create env specific src/config.js
   - npm run lint
   - npm run test
+  - istanbul cover ./node_modules/mocha/bin/_mocha --reporter lcovonly -- -R spec
+  - codecov
   - npm run build
 
 addons:
   code_climate:
     repo_token: $CODE_CLIMATE
+  code_cover:
+    repo_token: $CODECOV_TOKEN
 
 after_success:
   - npm i -g firebase-ci@latest  # install firebase-ci tool
