@@ -1,25 +1,29 @@
 # developer-insights
 
-[![Build Status][travis-image]][travis-url]
-[![Dependency Status][daviddm-image]][daviddm-url]
-[![Code Coverage][coverage-image]][coverage-url]
-[![Code Climate][climate-image]][climate-url]
-[![License][license-image]][license-url]
-[![Code Style][code-style-image]][code-style-url]
+[![GitHub license](https://img.shields.io/github/license/AlAskalany/developer-insights.svg)](https://github.com/AlAskalany/developer-insights/blob/master/LICENSE)
+[![Travis](https://img.shields.io/travis/AlAskalany/developer-insights.svg)](https://travis-ci.org/AlAskalany/developer-insights)
+[![Code Climate](https://img.shields.io/codeclimate/issues/AlAskalany/developer-insights.svg)](https://codeclimate.com/github/AlAskalany/developer-insights/issues)
+[![Code Climate](https://img.shields.io/codeclimate/maintainability/AlAskalany/developer-insights.svg)](https://codeclimate.com/github/AlAskalany/developer-insights/maintainability)
+[![Code Climate](https://img.shields.io/codeclimate/maintainability-percentage/AlAskalany/developer-insights.svg)](https://codeclimate.com/github/AlAskalany/developer-insights/maintainability)
+[![Code Climate](https://img.shields.io/codeclimate/coverage/AlAskalany/developer-insights.svg)](https://codeclimate.com/github/AlAskalany/developer-insights)
+[![Code Climate](https://img.shields.io/codeclimate/coverage-letter/AlAskalany/developer-insights.svg)](https://codeclimate.com/github/AlAskalany/developer-insights)
+[![Code Climate](https://img.shields.io/codeclimate/tech-debt/AlAskalany/developer-insights.svg)](https://codeclimate.com/github/AlAskalany/developer-insights/trends/technical_debt)
 
 ## Table of Contents
+
 1. [Features](#features)
-1. [Requirements](#requirements)
-1. [Getting Started](#getting-started)
-1. [Application Structure](#application-structure)
-1. [Development](#development)
-  1. [Routing](#routing)
-1. [Testing](#testing)
-1. [Configuration](#configuration)
-1. [Production](#production)
-1. [Deployment](#deployment)
+2. [Requirements](#requirements)
+3. [Getting Started](#getting-started)
+4. [Config Files](#config-files)
+5. [Application Structure](#application-structure)
+6. [Development](#development)
+    * [Routing](#routing)
+7. [Testing](#testing)
+8. [Production](#production)
+    * [Deployment](#deployment)
 
 ## Requirements
+
 * node `^6.11.5`
 * yarn `^0.23.0` or npm `^3.0.0`
 
@@ -43,18 +47,17 @@
 
 While developing, you will probably rely mostly on `npm start`; however, there are additional scripts at your disposal:
 
-|`npm run <script>`    |Description|
-|-------------------|-----------|
-|`start`            |Serves your app at `localhost:3000` and displays [Webpack Dashboard](https://github.com/FormidableLabs/webpack-dashboard)|
-|`start:simple`     |Serves your app at `localhost:3000` without [Webpack Dashboard](https://github.com/FormidableLabs/webpack-dashboard)|
-|`build`            |Builds the application to ./dist|
-|`test`             |Runs unit tests with Karma. See [testing](#testing)|
-|`test:watch`       |Runs `test` in watch mode to re-run tests when changed|
-|`lint`             |[Lints](http://stackoverflow.com/questions/8503559/what-is-linting) the project for potential errors|
-|`lint:fix`         |Lints the project and [fixes all correctable errors](http://eslint.org/docs/user-guide/command-line-interface.html#fix)|
+| `npm run <script>` | Description                                                                                                               |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------- |
+| `start`            | Serves your app at `localhost:3000` and displays [Webpack Dashboard](https://github.com/FormidableLabs/webpack-dashboard) |
+| `start:simple`     | Serves your app at `localhost:3000` without [Webpack Dashboard](https://github.com/FormidableLabs/webpack-dashboard)      |
+| `build`            | Builds the application to ./dist                                                                                          |
+| `test`             | Runs unit tests with Karma. See [testing](#testing)                                                                       |
+| `test:watch`       | Runs `test` in watch mode to re-run tests when changed                                                                    |
+| `lint`             | [Lints](http://stackoverflow.com/questions/8503559/what-is-linting) the project for potential errors                      |
+| `lint:fix`         | Lints the project and [fixes all correctable errors](http://eslint.org/docs/user-guide/command-line-interface.html#fix)   |
 
 [Husky](https://github.com/typicode/husky) is used to enable `prepush` hook capability. The `prepush` script currently runs `eslint`, which will keep you from pushing if there is any lint within your code. If you would like to disable this, remove the `prepush` script from the `package.json`.
-
 
 ## Config Files
 
@@ -70,7 +73,7 @@ More details in the [Application Structure Section](#application-structure)
 
 The application structure presented in this boilerplate is **fractal**, where functionality is grouped primarily by feature rather than file type. Please note, however, that this structure is only meant to serve as a guide, it is by no means prescriptive. That said, it aims to represent generally accepted guidelines and patterns for building scalable applications. If you wish to read more about this pattern, please check out this [awesome writeup](https://github.com/davezuko/react-redux-starter-kit/wiki/Fractal-Project-Structure) by [Justin Greenberg](https://github.com/justingreenberg).
 
-```
+```sh
 .
 ├── build                    # All build-related configuration
 │   ├── scripts              # Scripts used within the building process
@@ -110,10 +113,14 @@ The application structure presented in this boilerplate is **fractal**, where fu
 └── tests                    # Unit tests
 ```
 
+## Development
+
 ### Routing
+
 We use `react-router` [route definitions](https://github.com/ReactTraining/react-router/blob/v3/docs/API.md#plainroute) (`<route>/index.js`) to define units of logic within our application. See the [application structure](#application-structure) section for more information.
 
 ## Testing
+
 To add a unit test, create a `.spec.js` file anywhere inside of `./tests`. Karma and webpack will automatically find these files, and Mocha and Chai will be available within your test without the need to import them.
 
 ## Production
@@ -125,6 +132,7 @@ Build code before deployment by running `npm run build`. There are multiple opti
 1. Install Firebase Command Line Tool: `npm i -g firebase-tools`
 
 #### CI Deploy (recommended)
+
 **Note**: Config for this is located within `travis.yml`
 `firebase-ci` has been added to simplify the CI deployment process. All that is required is providing authentication with Firebase:
 
@@ -139,14 +147,15 @@ For more options on CI settings checkout the [firebase-ci docs](https://github.c
 #### Manual deploy
 
 1. Run `firebase:login`
-1. Initialize project with `firebase init` then answer:
-  * What file should be used for Database Rules?  -> `database.rules.json`
-  * What do you want to use as your public directory? -> `build`
-  * Configure as a single-page app (rewrite all urls to /index.html)? -> `Yes`
-  * What Firebase project do you want to associate as default?  -> **your Firebase project name**
-1. Build Project: `npm run build`
-1. Confirm Firebase config by running locally: `firebase serve`
-1. Deploy to firebase: `firebase deploy`
+2. Initialize project with `firebase init` then answer:
+    * What file should be used for Database Rules?  -> `database.rules.json`
+    * What do you want to use as your public directory? -> `build`
+    * Configure as a single-page app (rewrite all urls to /index.html)? -> `Yes`
+    * What Firebase project do you want to associate as default?  -> **your Firebase project name**
+3. Build Project: `npm run build`
+4. Confirm Firebase config by running locally: `firebase serve`
+5. Deploy to firebase: `firebase deploy`
+
 **NOTE:** You can use `firebase serve` to test how your application will work when deployed to Firebase, but make sure you run `npm run build` first.
 
 ## FAQ
@@ -165,15 +174,10 @@ For more options on CI settings checkout the [firebase-ci docs](https://github.c
     * smaller files which are easier to parse
     * functional components can be helpful (along with other tools) when attempting to optimize things
 
-[travis-image]: https://img.shields.io/travis/AlAskalany/developer-insights/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/AlAskalany/developer-insights
-[daviddm-image]: https://img.shields.io/david/AlAskalany/developer-insights.svg?style=flat-square
-[daviddm-url]: https://david-dm.org/AlAskalany/developer-insights
-[climate-image]: https://img.shields.io/codeclimate/github/AlAskalany/developer-insights.svg?style=flat-square
-[climate-url]: https://codeclimate.com/github/AlAskalany/developer-insights
-[coverage-image]: https://img.shields.io/codeclimate/coverage/github/AlAskalany/developer-insights.svg?style=flat-square
-[coverage-url]: https://codeclimate.com/github/AlAskalany/developer-insights
-[license-image]: https://img.shields.io/npm/l/developer-insights.svg?style=flat-square
-[license-url]: https://github.com/AlAskalany/developer-insights/blob/master/LICENSE
-[code-style-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
-[code-style-url]: http://standardjs.com/
+---
+![GitHub forks](https://img.shields.io/github/forks/badges/shields.svg?style=social&label=Fork)
+![GitHub stars](https://img.shields.io/github/stars/badges/shields.svg?style=social&label=Stars)
+![GitHub watchers](https://img.shields.io/github/watchers/badges/shields.svg?style=social&label=Watch)
+![GitHub followers](https://img.shields.io/github/followers/espadrine.svg?style=social&label=Follow)
+![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)
+![Twitter Follow](https://img.shields.io/twitter/follow/askalanism.svg?style=social&label=Follow)
