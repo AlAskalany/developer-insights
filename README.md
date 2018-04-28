@@ -8,6 +8,7 @@
 [![Code Climate](https://img.shields.io/codeclimate/coverage/AlAskalany/developer-insights.svg)](https://codeclimate.com/github/AlAskalany/developer-insights)
 [![Code Climate](https://img.shields.io/codeclimate/coverage-letter/AlAskalany/developer-insights.svg)](https://codeclimate.com/github/AlAskalany/developer-insights)
 [![Code Climate](https://img.shields.io/codeclimate/tech-debt/AlAskalany/developer-insights.svg)](https://codeclimate.com/github/AlAskalany/developer-insights/trends/technical_debt)
+[![codecov](https://codecov.io/gh/AlAskalany/developer-insights/branch/master/graph/badge.svg)](https://codecov.io/gh/AlAskalany/developer-insights)
 
 ## Table of Contents
 
