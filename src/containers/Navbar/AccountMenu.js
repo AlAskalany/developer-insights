@@ -18,8 +18,7 @@ export const AccountMenu = ({
       aria-owns={anchorEl ? 'menu-appbar' : null}
       aria-haspopup="true"
       onClick={handleMenu}
-      color="contrast"
-    >
+      color="contrast">
       <AccountCircle />
     </IconButton>
     <Menu
@@ -28,8 +27,7 @@ export const AccountMenu = ({
       anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
       transformOrigin={{ vertical: 'top', horizontal: 'right' }}
       open={Boolean(anchorEl)}
-      onClose={closeAccountMenu}
-    >
+      onClose={closeAccountMenu}>
       <MenuItem onClick={goToAccount}>Account</MenuItem>
       <MenuItem onClick={onLogoutClick}>Sign Out</MenuItem>
     </Menu>

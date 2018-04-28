@@ -26,8 +26,7 @@ export const Navbar = ({
         color="inherit"
         className={classes.flex}
         component={Link}
-        to={authExists ? LIST_PATH : '/'}
-      >
+        to={authExists ? LIST_PATH : '/'}>
         developer-insights
       </Typography>
       {authExists ? (

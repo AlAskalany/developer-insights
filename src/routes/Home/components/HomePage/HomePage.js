@@ -20,8 +20,7 @@ export const Home = () => (
               <a
                 href={reactRouterUrl}
                 target="_blank"
-                rel="noopener noreferrer"
-              >
+                rel="noopener noreferrer">
                 react-router
               </a>
             </span>
@@ -71,8 +70,7 @@ export const Home = () => (
               <a
                 href={reactRouterUrl}
                 target="_blank"
-                rel="noopener noreferrer"
-              >
+                rel="noopener noreferrer">
                 redux-form
               </a>
             </span>
