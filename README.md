@@ -1,14 +1,13 @@
 # developer-insights
 
 [![GitHub license](https://img.shields.io/github/license/AlAskalany/developer-insights.svg)](https://github.com/AlAskalany/developer-insights/blob/master/LICENSE)
-![Travis](https://img.shields.io/travis/AlAskalany/developer-insights.svg)
-![Travis](https://img.shields.io/travis/AlAskalany/developer-insights.svg)
-![Code Climate](https://img.shields.io/codeclimate/issues/AlAskalany/developer-insights.svg)
-![Code Climate](https://img.shields.io/codeclimate/maintainability/AlAskalany/developer-insights.svg)
-![Code Climate](https://img.shields.io/codeclimate/maintainability-percentage/AlAskalany/developer-insights.svg)
-![Code Climate](https://img.shields.io/codeclimate/coverage/AlAskalany/developer-insights.svg)
-![Code Climate](https://img.shields.io/codeclimate/coverage-letter/AlAskalany/developer-insights.svg)
-![Code Climate](https://img.shields.io/codeclimate/tech-debt/AlAskalany/developer-insights.svg)
+[![Travis](https://img.shields.io/travis/AlAskalany/developer-insights.svg)](https://travis-ci.org/AlAskalany/developer-insights)
+[![Code Climate](https://img.shields.io/codeclimate/issues/AlAskalany/developer-insights.svg)](https://codeclimate.com/github/AlAskalany/developer-insights/issues)
+[![Code Climate](https://img.shields.io/codeclimate/maintainability/AlAskalany/developer-insights.svg)](https://codeclimate.com/github/AlAskalany/developer-insights/maintainability)
+[![Code Climate](https://img.shields.io/codeclimate/maintainability-percentage/AlAskalany/developer-insights.svg)](https://codeclimate.com/github/AlAskalany/developer-insights/maintainability)
+[![Code Climate](https://img.shields.io/codeclimate/coverage/AlAskalany/developer-insights.svg)](https://codeclimate.com/github/AlAskalany/developer-insights)
+[![Code Climate](https://img.shields.io/codeclimate/coverage-letter/AlAskalany/developer-insights.svg)](https://codeclimate.com/github/AlAskalany/developer-insights)
+[![Code Climate](https://img.shields.io/codeclimate/tech-debt/AlAskalany/developer-insights.svg)](https://codeclimate.com/github/AlAskalany/developer-insights/trends/technical_debt)
 
 ## Table of Contents
 
