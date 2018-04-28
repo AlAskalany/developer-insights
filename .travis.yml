@@ -34,7 +34,6 @@ script:
   - firebase-ci createConfig # create env specific src/config.js
   - npm run lint
   - npm run test
-  - istanbul cover ./node_modules/mocha/bin/_mocha --reporter lcovonly -- -R spec
   - codecov
   - npm run build
 
